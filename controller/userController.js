@@ -41,6 +41,7 @@ export const Login=async(req,res)=>{
     try{
        const {email,password}=req.body
        console.log(password)
+       console.log(email)
         const user=await userModel.findOne({email})
         if(!user)return res.json({success:false,error:'user not found'})
 
